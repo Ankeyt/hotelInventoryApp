@@ -9,9 +9,15 @@ export class RoomsComponent implements OnInit {
 
   hotelName = 'Marriot wala'
 
+  numberofRooms=11
+
+  hideRooms=false
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggle(){
+this.hideRooms=!this.hideRooms
+  }
 }
