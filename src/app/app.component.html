@@ -1,4 +1,14 @@
-<div class="container">
-  <p>Hotel Inventory</p>
-  <hinv-rooms></hinv-rooms>
+<div class="container" [ngSwitch]="role">
+  <div *ngSwitchCase="'admin'">
+    <p>Hotel Inventory</p>
+    <hinv-rooms></hinv-rooms>
+  </div>
+  <div *ngSwitchCase="'user'">
+    Welcome User
+  </div>
+
+  <div *ngSwitchDefault>
+    You are unauthorized
+  </div>
+  
 </div>
